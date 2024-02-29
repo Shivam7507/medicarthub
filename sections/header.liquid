@@ -1,0 +1,59 @@
+<div class="relative bg-white">
+    <div class="mx-auto px-4 ">
+        <div class="flex justify-center item-center py-6 md:justify-start md:space-x-10">
+            {% comment %}  storename{% endcomment %}
+            <div class="div flex justify-start lg:flex-1 truncate">
+                <h1 class="text x1 font-bold truncate">
+                    {{shop.name}}
+                </h1>
+            </div>
+            {% comment %} navigation menu {% endcomment %}
+            <div class="hidden md:flex space-x-10">
+                {%for link in section.settings.menu.links%}
+                    {% if link.links != blank %}
+                        <div class="relative">
+                            <button class="inline-flex items-center">
+                               {{link.title}}
+                               {% render 'icon_dropdown' %}
+                            </button>
+
+                        </div>
+                        {% else %}
+                            <a href="{{link.url}}" class="text-base text-grey-500 hover:text-grey-700">
+                                {{link.title}}
+                            </a>
+                         
+                    {% endif %}
+
+
+                {%endfor%}
+            </div>
+            {% comment %} cart button {% endcomment %}
+            <div class="hidden md:flex justify-end md:flex-1 space-x-1">
+                <a href="/cart" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+              </svg>
+              
+
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% schema  %} 
+{
+    "name": "header",
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "main-menu",
+            "label": "heading navigation menu"
+        }
+    ]
+
+}
+{% endschema %}
