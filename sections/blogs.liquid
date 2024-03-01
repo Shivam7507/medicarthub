@@ -1,0 +1,11 @@
+{% if blogs.size > 0 %}
+    <h2>Latest Blog Posts</h2>
+    <ul>
+      {% for blog in blogs %}
+        <li>
+          <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+          <p>{{ blog.articles.first.content | strip_html | truncatewords: 20 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}

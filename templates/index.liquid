@@ -1,10 +1,22 @@
-{% for product in collections.frontpage.products limit:4 %}
-  <div>
-    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-    {{ product.price | money }}
-    {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
-    <a href="{{ product.url | within: collection }}">
-      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
-    </a>
-  </div>
-{% endfor %}
+<link rel="stylesheet" href="{{ 'products.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{% section 'landing' %}
+<section class="featured-products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="products">
+            {% for product in collections.frontpage.products limit: 4 %}
+                <div class="product">
+                    <img src="{{ product.featured_image.src | img_url: 'medium'}}" alt="{{ product.title }}" width="300px" height="300px">
+                    <h3>{{ product.title }}</h3>
+                    <p>{{ product.price | money }}</p>
+                    <a href="{{ product.url }}" ><button class="button-29" role="button">View Product</button></a>
+                    
+                </div>
+            {% endfor %}
+         </div>
+    </div>
+</section>
+
+{%  section 'about_us' %}
+

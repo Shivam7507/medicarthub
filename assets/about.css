@@ -1,0 +1,18 @@
+h1 {
+  color: #053c51;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain {
+  padding: 100px 0;
+  margin: 50px;
+  padding: 20px;
+  margin: 20px;
+  line-height: 1.5;
+  color: #777777;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,155 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(
+    circle,
+    rgba(225, 141, 239, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+/* Style for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the section title */
+.featured-products h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the grid layout */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  position: relative; /* Ensure the container is positioned relative for absolute positioning */
+}
+
+/* Style for each product */
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #fff;
+  transition: transform 0.3s;
+  position: relative; /* Ensure the product container is positioned relative for absolute positioning */
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Hover effect */
+.product:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Style for the product image */
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  /* width: 70%; Ensure all images fill their containers */
+  /* height: 200px; Set a fixed height for the images */
+  object-fit: cover; /* Maintain aspect ratio and fill container */
+  display: block; /* Ensure the image is centered properly */
+  margin: 0 auto; /* Center the image horizontally */
+  border: 2px solid #ddd; /* Add border to the image */
+}
+
+/* Style for the product title */
+.product h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+}
+
+/* Style for the product price */
+.product p {
+  font-size: 16px;
+  color: #007185;
+  margin-bottom: 10px;
+}
+
+/* Style for the "View Product" button */
+.product .btn {
+  position: absolute;
+  bottom: 15px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #da77f2; /* Amazon's button color */
+  color: #111; /* Amazon's button text color */
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.product .btn:hover {
+  background-color: #ddb347; /* Darker shade of Amazon's button color on hover */
+}
+
+/* <!-- HTML !--> */
+/* <button class="button-29" role="button">Button 29</button> */
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #f5aaf9 0,
+    #da77f2 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}

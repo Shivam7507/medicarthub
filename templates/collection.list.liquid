@@ -5,9 +5,9 @@
       <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
       {{ product.price | money }}
       {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
-      <a href="{{ product.url | within: collection }}">
-        <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
-      </a>
+        <a href="{{ product.url | within: collection }}">
+          <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" width="500px", height="500px">
+        </a>
     </div>
   {% else %}
     <p>no matches</p>
