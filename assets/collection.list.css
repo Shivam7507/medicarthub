@@ -1,0 +1,114 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(225, 141, 239, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  font-family: "Arial", sans-serif;
+}
+
+/* Style for the container */
+.container {
+  padding-top: 15%;
+  padding-bottom: 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the section title */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Style for each product */
+div {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #fff;
+  transition: transform 0.3s;
+  width: calc(50% - 20px); /* Display two products in a row with some spacing */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 20px;
+}
+
+/* Hover effect */
+div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Style for the product image */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #ddd;
+}
+
+/* Style for the product title */
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style for the price */
+span {
+  display: block;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Style for the "sold out" message */
+strong {
+  color: #ff0000;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Style for pagination */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagination .current {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
