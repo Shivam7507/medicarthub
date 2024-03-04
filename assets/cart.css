@@ -4,7 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background: radial-gradient(
+    circle,
+    rgba(225, 141, 239, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 /* Style for the cart container */
 .cart-container {
   max-width: 1200px;
@@ -44,7 +50,7 @@
 /* Style for table cells */
 .cart-table td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #200808;
 }
 
 /* Style for product image */

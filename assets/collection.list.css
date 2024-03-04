@@ -1,114 +1,60 @@
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background: radial-gradient(
     circle,
     rgba(225, 141, 239, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
-  font-family: "Arial", sans-serif;
 }
 
-/* Style for the container */
-.container {
-  padding-top: 15%;
-  padding-bottom: 10%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Style for the section title */
-h1 {
-  text-align: center;
-  font-size: 24px;
+.collection-product {
+  background-color: #e599f7;
+  margin: 10% auto;
+  margin-bottom: 5%;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
   margin-bottom: 20px;
-}
-
-/* Style for the products */
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Style for each product */
-div {
-  border: 1px solid #ddd;
-  padding: 15px;
-  background-color: #fff;
-  transition: transform 0.3s;
-  width: calc(50% - 20px); /* Display two products in a row with some spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  flex: 0 0 calc(50% - 10px);
+  box-sizing: border-box;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-bottom: 20px;
 }
 
-/* Hover effect */
-div:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
+.collection-product:hover {
+  transform: scale(1.05);
 }
 
-/* Style for the product image */
-img {
+.collection-product a {
+  text-decoration: none;
+  color: #212121;
+  font-weight: 500;
+  display: block;
+  padding: 8px;
+}
+
+.collection-product .price,
+.collection-product .sold-out {
+  display: block;
+  padding: 0 8px 8px;
+}
+
+.collection-product img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border: 2px solid #ddd;
+  border-radius: 8px 8px 0 0;
 }
 
-/* Style for the product title */
-a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
+.collection-product + .collection-product {
+  margin-left: 37%;
+  margin-bottom: 20px;
 }
 
-/* Style for the price */
-span {
-  display: block;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-/* Style for the "sold out" message */
-strong {
-  color: #ff0000;
-  display: block;
-  margin-top: 10px;
-}
-
-/* Style for pagination */
-.pagination {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.pagination a,
-.pagination span {
-  display: inline-block;
-  padding: 8px 12px;
-  margin: 0 4px;
-  border: 1px solid #ddd;
-  background-color: #f1f1f1;
-  color: #333;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.pagination .current {
-  background-color: #4caf50;
-  color: white;
-  border: 1px solid #4caf50;
+.collection-product::after {
+  content: "";
+  display: table;
+  clear: both;
 }
