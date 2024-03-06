@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   color: #053c51;
   height: 100%;
   margin: 0;
@@ -15,4 +15,25 @@ h1 {
   line-height: 1.5;
   color: #777777;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ */
+
+.he {
+  color: #053c51;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em; /* Adjusted font size */
+}
+
+.contain {
+  padding: 70px 50px;
+  margin: 20px; /* Adjusted margin value */
+  line-height: 1.5;
+  color: #777777;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box-shadow for a subtle shadow effect */
+  background-color: #fff; /* Added background color */
 }

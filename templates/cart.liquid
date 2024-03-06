@@ -46,8 +46,9 @@
         <p>Subtotal: {{ cart.total_price | money }}</p>
       </div>
       <div class="cart-buttons">
+        
  
-        <button type="submit" name="checkout">Proceed to Checkout</button>
+        <button type="submit" name="checkout"><a href="/checkout">Proceed to Checkout</a></button>
       </div>
     </form>
   {% else %}
