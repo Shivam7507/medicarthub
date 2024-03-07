@@ -1,28 +1,17 @@
-// File: assets/add-product.js
-
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const apiKey = "a45cfb770c24c8cbd4b725bd0177e8a8";
-    const apiPassword = "your-api-password";
-    const shopName = "your-shop-name";
-    const apiUrl = `https://${shopName}.myshopify.com/admin/api/2022-01/products.json`;
-
     const formData = {
-      product: {
-        title: document.getElementById("title").value,
-        price: document.getElementById("price").value,
-        description: document.getElementById("description").value,
-        // Add other product details as needed
-      },
+      title: document.getElementById("title").value,
+      price: document.getElementById("price").value,
+      description: document.getElementById("description").value,
     };
 
-    fetch(apiUrl, {
+    fetch("/add-product", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Shopify-Access-Token": apiPassword,
       },
       body: JSON.stringify(formData),
     })
